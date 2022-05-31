@@ -41,11 +41,8 @@ ipcMain.on('minimize-window', () => { win.minimize(); });
 ipcMain.on('resize-window', () => { win.setSize(1200, 728); });
 ipcMain.on('close-window', () => { win.close(); });
 ipcMain.on('open-game', () => { win.loadFile('src/html/game.html'); });
-ipcMain.on('open-lore', () => { win.loadFile('src/html/lore.html'); });
-ipcMain.on('open-intro', () => { win.loadFile('src/html/intro.html'); });
 ipcMain.on('open-start', () => { win.loadFile('src/html/start.html'); });
 ipcMain.on('open-settings', () => { win.loadFile('src/html/settings.html'); });
-ipcMain.on('open-update', () => { win.loadFile('src/html/update.html'); });
 
 app.whenReady().then(createWindow);
 app.on('before-quit', function() { Tray.destroy(); });
